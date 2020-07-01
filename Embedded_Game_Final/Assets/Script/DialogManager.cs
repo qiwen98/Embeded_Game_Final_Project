@@ -55,7 +55,7 @@ public class DialogManager : MonoBehaviour
         {
             NextButtonText.text = "Next";
             StopDialog();
-            Debug.Log("prss");
+            
         }
 
         if (convoIndex<conversation.Count-1)

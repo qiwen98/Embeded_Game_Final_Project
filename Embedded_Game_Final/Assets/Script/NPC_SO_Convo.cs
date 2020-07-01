@@ -8,6 +8,8 @@ public class NPC_SO_Convo : MonoBehaviour
     public SO_Convo myConvo;
     string Key;
     public GameObject ExclamationMark;
+    float ori_speed;
+    float temp_speed=5;
 
     private void Awake()
     {
@@ -23,6 +25,8 @@ public class NPC_SO_Convo : MonoBehaviour
 
 
             PlayerPrefs.SetString("MeetBefore", Key);
+            ori_speed= other.gameObject.GetComponent<PlayerController>().speed ;
+
             //if this npc meet with the player b4
             if (PlayerPrefs.HasKey("MeetBefore"))
             {
@@ -36,9 +40,18 @@ public class NPC_SO_Convo : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         transform.LookAt(other.transform);
+
+        //reduce the speed of player
+        other.gameObject.GetComponent<PlayerController>().speed =temp_speed;
     }
 
- 
+    private void OnTriggerExit(Collider other)
+    {
+        dialogManager.StopDialog();
 
-  
+        //restore the speed of player
+        other.gameObject.GetComponent<PlayerController>().speed = ori_speed;
+    }
+
+
 }
