@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NPC_SO_Convo : MonoBehaviour
 {
@@ -8,12 +9,21 @@ public class NPC_SO_Convo : MonoBehaviour
     public SO_Convo myConvo;
     string Key;
     public GameObject ExclamationMark;
+    
+    
+    
     float ori_speed;
     float temp_speed=5;
 
     private void Awake()
     {
         Key = myConvo.npcName+"hasmeetPlayer";
+        
+    }
+
+    private void Start()
+    {
+        
     }
 
     private void OnTriggerEnter(Collider other)
