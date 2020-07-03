@@ -51,12 +51,14 @@ public class DialogManager : MonoBehaviour
         //make the fialod fade in
         canvasgroup = dialogPanel.GetComponent<CanvasGroup>();
         canvasgroup.alpha = 0f;
+        dialogPanel.transform.localScale = new Vector3(0, 0, 0);
 
         float duration = 0.3f;
         LeanTween.alphaCanvas(canvasgroup, 1.0f, duration).setDelay(0.2f).setEase(LeanTweenType.easeInOutExpo);
+        LeanTween.scale(dialogPanel,new Vector3(1,1,1),duration).setDelay(0.3f).setEase(LeanTweenType.easeInOutExpo);
 
+        NextButtonText.text = "Next";
 
-        
     }
 
   
@@ -79,10 +81,13 @@ public class DialogManager : MonoBehaviour
     public void Next()
     {
         convoIndex += 1;
+        
+
 
         if (convoIndex == conversation.Count)
         {
-            NextButtonText.text = "Next";
+            NextButtonText.text = "";
+
             StopDialog();
             
         }
@@ -100,6 +105,7 @@ public class DialogManager : MonoBehaviour
             showText();
            
         }
+
 
        
     }
