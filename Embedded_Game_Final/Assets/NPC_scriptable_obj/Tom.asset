@@ -14,8 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Tom
   myConversation:
-  - Hi, I am Tom
-  - Nice To Meet You
+  - Hello, I am ginger road sign #1.
+  - I just make certain expressions.
+  - Just follow a fixed pattern.
+  - I know you're not.
+  - Try to walk around and show off your skills.
+  - I thought you could do a double jump and punch.
+  - Go for a walk anyway!
+  - By the way, remember to find Hans! (I won't talk anymore)
+  - TimelineCameraLevel0-1
   face_Animation: 1
   body_Animation: 2
   idle_Animation: 1

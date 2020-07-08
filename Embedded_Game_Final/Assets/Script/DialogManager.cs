@@ -47,7 +47,7 @@ public class DialogManager : MonoBehaviour
         convoIndex = 0;
         showText();
 
-         dialogPanel.SetActive(true);
+        dialogPanel.SetActive(true);
         //make the fialod fade in
         canvasgroup = dialogPanel.GetComponent<CanvasGroup>();
         canvasgroup.alpha = 0f;
@@ -76,6 +76,8 @@ public class DialogManager : MonoBehaviour
     private void showText()
     {
         dialogText.text = conversation[convoIndex];
+        if(TimelineManager.instance.checkAndPlayPlayable(dialogText.text)) Next();
+
     }
 
     public void Next()

@@ -64,6 +64,9 @@ public class NPC_SO_Convo : MonoBehaviour
 
         //reduce the speed of player
         other.gameObject.GetComponent<PlayerController>().Speed =temp_speed;
+
+        handleNextButton(other);
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -74,5 +77,14 @@ public class NPC_SO_Convo : MonoBehaviour
         other.gameObject.GetComponent<PlayerController>().Speed = ori_speed;
     }
 
+    private void handleNextButton(Collider other)
+    {
+        PlayerController plc = other.GetComponent<PlayerController>();
+        if(plc.buttonState==ButtonState.JOYSTICK8&&Utility.instance.handleKeyBoardEvent())
+        {
+            dialogManager.Next();
+            Utility.instance.currTime = Time.frameCount;
+        }
+    }
 
 }
