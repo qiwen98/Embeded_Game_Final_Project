@@ -9,6 +9,10 @@ public class NPC_SO_Convo : MonoBehaviour
     public SO_Convo myConvo;
     string Key;
     public GameObject ExclamationMark;
+    Animator anim;
+    string face_anim;
+    string body_anim;
+    string idle_anim;
     
     
     
@@ -18,19 +22,26 @@ public class NPC_SO_Convo : MonoBehaviour
     private void Awake()
     {
         Key = myConvo.npcName+"hasmeetPlayer";
-        
+        face_anim = myConvo.face_Animation.ToString();
+        body_anim = myConvo.body_Animation.ToString();
+        idle_anim = myConvo.idle_Animation.ToString();
+
     }
 
     private void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        anim.Play(idle_anim);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-           
+            //play defined anim in scriptable obj
+            anim.Play(face_anim);
+            anim.Play(body_anim);
+
             dialogManager.Start_dialog(myConvo);
 
 

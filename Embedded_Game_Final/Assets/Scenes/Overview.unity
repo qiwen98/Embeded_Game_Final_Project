@@ -13469,6 +13469,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 356112260}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &357192574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1002408230}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &357192575
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 357192574}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8f1b3fb6e08f20d4eb7eb9691f990132, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &358311654
 GameObject:
   m_ObjectHideFlags: 0
@@ -40650,6 +40675,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9864557
       objectReference: {fileID: 0}
+    - target: {fileID: 4234143579737425328, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4435274157005705025, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -40814,6 +40844,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GingerManModel 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654372038605523258, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -41020,6 +41060,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9972448
       objectReference: {fileID: 0}
+    - target: {fileID: 8673240615857417805, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8710150666759131887, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -41080,6 +41125,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9735624
       objectReference: {fileID: 0}
+    - target: {fileID: 9126753590646638129, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 79680fca99923844c86b12b4b037e5ac, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b074491daef46544a97941a145f7c29c, type: 3}
 --- !u!1 &1005230485
@@ -65886,6 +65936,7 @@ GameObject:
   - component: {fileID: 1527263365}
   - component: {fileID: 1527263364}
   - component: {fileID: 1527263366}
+  - component: {fileID: 1527263367}
   m_Layer: 0
   m_Name: GinegerMan
   m_TagString: Player
@@ -65947,6 +65998,25 @@ MonoBehaviour:
   Health: 100
   Food: 100
   HungerRate: 0.1
+--- !u!95 &1527263367
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527263363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 663fe8ac2fa091241871452da7ded349, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1529791979
 PrefabInstance:
   m_ObjectHideFlags: 0
