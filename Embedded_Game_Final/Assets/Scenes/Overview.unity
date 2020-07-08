@@ -82690,6 +82690,12 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.96817964
       objectReference: {fileID: 0}
+    - target: {fileID: 2236816076123775726, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: myConvo
+      value: 
+      objectReference: {fileID: 11400000, guid: dbad348fda3517b409479bf47aa05a8f,
+        type: 2}
     - target: {fileID: 2826195315982137603, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalRotation.x

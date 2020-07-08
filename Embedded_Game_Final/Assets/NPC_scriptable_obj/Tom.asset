@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd42c14b7fd18ed45b8de4f4d230586d, type: 3}
   m_Name: Tom
   m_EditorClassIdentifier: 
-  npcName: 
-  myConversation: []
-  face_Animation: 0
-  body_Animation: 0
-  idle_Animation: 0
+  npcName: Tom
+  myConversation:
+  - Hi, I am Tom
+  - Nice To Meet You
+  face_Animation: 1
+  body_Animation: 2
+  idle_Animation: 1

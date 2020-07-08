@@ -16,5 +16,6 @@ MonoBehaviour:
   myConversation:
   - Hi,ginger
   - I am Susan
-  face_Animation: {fileID: 0}
-  body_Animation: {fileID: 0}
+  face_Animation: 0
+  body_Animation: 0
+  idle_Animation: 0
