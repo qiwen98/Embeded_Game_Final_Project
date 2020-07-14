@@ -40,7 +40,15 @@ public class DialogManager : MonoBehaviour
     {
 
         npcNameText.text = _convo.npcName;
-        conversation = new List<string>(_convo.myConversation);
+        if(_convo.ConversationChoice1!=null&&_convo.condition_to_tigger_ConversationChoice1==true)
+        {
+            conversation = new List<string>(_convo.ConversationChoice1);
+        }
+        else
+        {
+            conversation = new List<string>(_convo.defaultConversation);
+        }
+       
         convoIndex = 0;
         showText();
 

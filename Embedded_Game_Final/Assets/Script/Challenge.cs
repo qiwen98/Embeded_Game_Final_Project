@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
+
+
 
 public enum ChallengeType
 {
@@ -22,8 +25,11 @@ public class Challenge : MonoBehaviour
     public float deathHeigt;
     public Vector3 oriPos;
 
-    public SO_Convo failDialog;
-    public SO_Convo successDialog;
+    // i think these two varaible are no needed
+    //public SO_Convo failDialog;
+    //public SO_Convo successDialog;
+
+    public GameEvent PlayerWinChallenged;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +59,14 @@ public class Challenge : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        playerWinChallengedOne();
+    }
+
+    //if player win the challenge one, raise the win event // here change the SO_players conversation
+
+    private void playerWinChallengedOne()
+    {
+        PlayerWinChallenged.Raise();
+        Debug.Log("event raised");
     }
 }

@@ -17,11 +17,12 @@ public class NPC_SO_Convo : MonoBehaviour
     float ori_speed;
     float temp_speed=5;
 
-    public NPC_SO_Convo npcStateSetter;
-    public SO_Convo myConvoSuccess;
+   // public NPC_SO_Convo npcStateSetter;
+   // public SO_Convo myConvoSuccess;
 
     private void Awake()
     {
+
         Key = myConvoOri.npcName+"hasmeetPlayer";
         face_anim = myConvoOri.face_Animation.ToString();
         body_anim = myConvoOri.body_Animation.ToString();

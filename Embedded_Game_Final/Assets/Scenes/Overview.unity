@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43956646, g: 0.48794383, b: 0.5681732, a: 1}
+  m_IndirectSpecularColor: {r: 0.43956694, g: 0.48794448, b: 0.56817424, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -12998,6 +12998,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -91.255005, z: 0}
+--- !u!1 &334847550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1849925251}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &334847551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334847550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351ae8965c28f8643ac22ba0eb60c6dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameEvent: {fileID: 11400000, guid: edd248e95497a7c4ab5b40aa189980fe, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 99d81c378668fdc48bfb366466c89fe2, type: 2}
+        m_MethodName: set_condition_to_tigger_ConversationChoice1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &335736835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40781,6 +40814,12 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.96817964
       objectReference: {fileID: 0}
+    - target: {fileID: 2236816076123775726, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: myConvoOri
+      value: 
+      objectReference: {fileID: 11400000, guid: bc894118a72982d43a5412fd308f148d,
+        type: 2}
     - target: {fileID: 2826195315982137603, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -41099,7 +41138,7 @@ PrefabInstance:
     - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7654372038605523258, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -67707,6 +67746,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 33062504}
     m_Modifications:
+    - target: {fileID: 317510059935942693, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: myConvoOri
+      value: 
+      objectReference: {fileID: 11400000, guid: 99d81c378668fdc48bfb366466c89fe2,
+        type: 2}
     - target: {fileID: 541705117101551699, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -83378,7 +83423,7 @@ PrefabInstance:
         type: 3}
       propertyPath: myConvoOri
       value: 
-      objectReference: {fileID: 11400000, guid: dbad348fda3517b409479bf47aa05a8f,
+      objectReference: {fileID: 11400000, guid: 99d81c378668fdc48bfb366466c89fe2,
         type: 2}
     - target: {fileID: 2826195315982137603, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -84974,9 +85019,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plc: {fileID: 1527263366}
   challengePosStart: {x: 0, y: 0, z: 0}
-  isSucess: 0
+  isSucess: 1
   deathHeigt: 0
   oriPos: {x: 0, y: 0, z: 0}
+  PlayerWinChallengedOne: {fileID: 11400000, guid: edd248e95497a7c4ab5b40aa189980fe,
+    type: 2}
 --- !u!4 &1893433025
 Transform:
   m_ObjectHideFlags: 0

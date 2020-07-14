@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd42c14b7fd18ed45b8de4f4d230586d, type: 3}
-  m_Name: Hans_Success
+  m_Name: Hans
   m_EditorClassIdentifier: 
   npcName: Hans
-  myConversation:
-  - I am Hans. I am Hans. I am Hans.
+  defaultConversation:
+  - ' I am Hans. I am Hans. I am Hans. '
   - Task! Task! Task!
   - Level! Level! Level!
   - TimelinePlatform0-2
@@ -24,3 +24,8 @@ MonoBehaviour:
   face_Animation: 0
   body_Animation: 0
   idle_Animation: 0
+  ConversationChoice1:
+  - Congrates, you have passed
+  ConversationChoice2: []
+  condition_to_tigger_ConversationChoice1: 1
+  condition_to_tigger_ConversationChoice2: 0

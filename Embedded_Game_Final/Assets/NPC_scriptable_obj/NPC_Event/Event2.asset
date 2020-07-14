@@ -9,13 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd42c14b7fd18ed45b8de4f4d230586d, type: 3}
-  m_Name: Susan
+  m_Script: {fileID: 11500000, guid: 96805093db8fd694b9b16d881184263c, type: 3}
+  m_Name: Event2
   m_EditorClassIdentifier: 
-  npcName: Susan
-  myConversation:
-  - Hi,ginger
-  - I am Susan
-  face_Animation: 0
-  body_Animation: 0
-  idle_Animation: 0
