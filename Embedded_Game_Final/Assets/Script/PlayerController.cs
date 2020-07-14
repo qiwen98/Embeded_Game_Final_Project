@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
         handleWalk();
 
         handleKeyboardEvent();
-        
+        /*
         if (Input.anyKeyDown)
         {
             foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
+        */
         
     }
 
@@ -177,8 +177,8 @@ public class PlayerController : MonoBehaviour
 
 
         //jump
-        //if(Input.GetButtonDown("Jump")
-        if (buttonState == ButtonState.JOYSTICK3)
+        //if(Input.GetButtonDown("Jump"))
+        if (buttonState == ButtonState.JOYSTICK3|| Input.GetButtonDown("Jump"))
         {
             if (cc.isGrounded)
             {

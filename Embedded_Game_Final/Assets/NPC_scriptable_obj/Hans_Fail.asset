@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd42c14b7fd18ed45b8de4f4d230586d, type: 3}
-  m_Name: Hans
+  m_Name: Hans_Fail
   m_EditorClassIdentifier: 
   npcName: Hans
   myConversation:

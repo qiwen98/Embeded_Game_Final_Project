@@ -36,11 +36,8 @@ public class DialogManager : MonoBehaviour
         
     }
 
-  
-
     public void Start_dialog(SO_Convo _convo)
     {
-
 
         npcNameText.text = _convo.npcName;
         conversation = new List<string>(_convo.myConversation);
@@ -72,11 +69,17 @@ public class DialogManager : MonoBehaviour
     }
 
     
-
+    /// <summary>
+    /// 在展示Text的时候展示有没有文字动画事件，如果有，则执行
+    /// </summary>
     private void showText()
     {
         dialogText.text = conversation[convoIndex];
+        Debug.Log(dialogText.text);
+
+        //观测Text有没有要执行playable或者challenge
         if(TimelineManager.instance.checkAndPlayPlayable(dialogText.text)) Next();
+        if(GameManager.instance.checkAndPlayChallenge(dialogText.text,true)) Next();
 
     }
 

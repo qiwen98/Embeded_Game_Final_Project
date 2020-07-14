@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NPC_SO_Convo : MonoBehaviour
 {
     public DialogManager dialogManager;
-    public SO_Convo myConvo;
+    public SO_Convo myConvoOri;
     string Key;
     public GameObject ExclamationMark;
     Animator anim;
@@ -14,17 +14,18 @@ public class NPC_SO_Convo : MonoBehaviour
     string body_anim;
     string idle_anim;
     
-    
-    
     float ori_speed;
     float temp_speed=5;
 
+    public NPC_SO_Convo npcStateSetter;
+    public SO_Convo myConvoSuccess;
+
     private void Awake()
     {
-        Key = myConvo.npcName+"hasmeetPlayer";
-        face_anim = myConvo.face_Animation.ToString();
-        body_anim = myConvo.body_Animation.ToString();
-        idle_anim = myConvo.idle_Animation.ToString();
+        Key = myConvoOri.npcName+"hasmeetPlayer";
+        face_anim = myConvoOri.face_Animation.ToString();
+        body_anim = myConvoOri.body_Animation.ToString();
+        idle_anim = myConvoOri.idle_Animation.ToString();
 
     }
 
@@ -42,7 +43,7 @@ public class NPC_SO_Convo : MonoBehaviour
             anim.Play(face_anim);
             anim.Play(body_anim);
 
-            dialogManager.Start_dialog(myConvo);
+            dialogManager.Start_dialog(myConvoOri);
 
 
             PlayerPrefs.SetString("MeetBefore", Key);
@@ -63,7 +64,7 @@ public class NPC_SO_Convo : MonoBehaviour
         transform.LookAt(other.transform);
 
         //reduce the speed of player
-        other.gameObject.GetComponent<PlayerController>().Speed =temp_speed;
+        other.gameObject.GetComponent<PlayerController>().Speed = temp_speed;
 
         handleNextButton(other);
 
