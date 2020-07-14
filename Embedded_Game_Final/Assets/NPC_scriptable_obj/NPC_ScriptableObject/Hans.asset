@@ -27,5 +27,5 @@ MonoBehaviour:
   ConversationChoice1:
   - Congrates, you have passed
   ConversationChoice2: []
-  condition_to_tigger_ConversationChoice1: 1
+  condition_to_tigger_ConversationChoice1: 0
   condition_to_tigger_ConversationChoice2: 0

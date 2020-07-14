@@ -13031,6 +13031,23 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 334847555}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!95 &334847555 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1133150761417605724, guid: b074491daef46544a97941a145f7c29c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1849925251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &335736835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85019,10 +85036,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plc: {fileID: 1527263366}
   challengePosStart: {x: 0, y: 0, z: 0}
-  isSucess: 1
+  isSucess: 0
   deathHeigt: 0
   oriPos: {x: 0, y: 0, z: 0}
-  PlayerWinChallengedOne: {fileID: 11400000, guid: edd248e95497a7c4ab5b40aa189980fe,
+  PlayerWinChallenged: {fileID: 11400000, guid: edd248e95497a7c4ab5b40aa189980fe,
     type: 2}
 --- !u!4 &1893433025
 Transform:
