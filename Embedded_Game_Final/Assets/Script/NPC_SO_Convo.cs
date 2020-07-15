@@ -27,6 +27,7 @@ public class NPC_SO_Convo : MonoBehaviour
         face_anim = myConvoOri.face_Animation.ToString();
         body_anim = myConvoOri.body_Animation.ToString();
         idle_anim = myConvoOri.idle_Animation.ToString();
+        myConvoOri.reset();
 
     }
 

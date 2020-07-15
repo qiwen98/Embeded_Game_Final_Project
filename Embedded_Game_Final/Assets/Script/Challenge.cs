@@ -68,5 +68,9 @@ public class Challenge : MonoBehaviour
     {
         PlayerWinChallenged.Raise();
         Debug.Log("event raised");
+        Debug.Log(plc.gameObject.transform.name +"and"+oriPos);
+        plc.gameObject.GetComponent<CharacterController>().enabled= false;
+        plc.gameObject.transform.position = oriPos;
+        plc.gameObject.GetComponent<CharacterController>().enabled = true;
     }
 }
