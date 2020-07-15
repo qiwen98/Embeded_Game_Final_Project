@@ -21,11 +21,17 @@ MonoBehaviour:
   - You must Jump from the begin to the end!
   - Haha!
   - Challenge0-1
-  face_Animation: 0
-  body_Animation: 0
-  idle_Animation: 0
+  face_Animation: 4
+  body_Animation: 2
+  idle_Animation: 2
   ConversationChoice1:
-  - Congrates, you have passed
+  - Congrates, you have passed!!!
+  - You are the King of platformer
+  - Can you help us something?
+  - The future of the platformer game has been distored !
+  - We need a warrior like you !
+  - 'Go through the platformer history! '
+  - Help us to regain the future of platformer !
   ConversationChoice2: []
   condition_to_tigger_ConversationChoice1: 0
   condition_to_tigger_ConversationChoice2: 0
