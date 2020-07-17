@@ -38,7 +38,6 @@ public class DialogManager : MonoBehaviour
 
     public void Start_dialog(SO_Convo _convo)
     {
-
         npcNameText.text = _convo.npcName;
         if(_convo.ConversationChoice1!=null&&_convo.condition_to_tigger_ConversationChoice1==true)
         {

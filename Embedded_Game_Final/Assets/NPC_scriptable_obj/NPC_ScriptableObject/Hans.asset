@@ -29,9 +29,14 @@ MonoBehaviour:
   - You are the King of platformer
   - Can you help us something?
   - The future of the platformer game has been distored !
-  - We need a warrior like you !
-  - 'Go through the platformer history! '
+  - Everyone is going to die.
+  - TimelineCameraLevel0-3
   - Help us to regain the future of platformer !
+  - We need a warrior like you !
+  - Go to find the 4 master.
+  - They will take you back to history.
+  - TimelineCameraLevel0-4
+  - Go to find them!!
   ConversationChoice2: []
-  condition_to_tigger_ConversationChoice1: 0
+  condition_to_tigger_ConversationChoice1: 1
   condition_to_tigger_ConversationChoice2: 0

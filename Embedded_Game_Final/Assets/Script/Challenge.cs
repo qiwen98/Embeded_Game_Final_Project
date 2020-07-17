@@ -72,5 +72,6 @@ public class Challenge : MonoBehaviour
         plc.gameObject.GetComponent<CharacterController>().enabled= false;
         plc.gameObject.transform.position = oriPos;
         plc.gameObject.GetComponent<CharacterController>().enabled = true;
+        this.gameObject.SetActive(false);
     }
 }

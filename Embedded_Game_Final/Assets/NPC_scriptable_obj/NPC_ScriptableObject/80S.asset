@@ -10,20 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd42c14b7fd18ed45b8de4f4d230586d, type: 3}
-  m_Name: Tom
+  m_Name: 80S
   m_EditorClassIdentifier: 
-  npcName: Tom
+  npcName: Hans
   defaultConversation:
-  - You finally wake up my bro
-  - I am the gingerman who follow the  certain pattern.
-  - But I know you are not.
-  - Let me show you the villiage.
-  - TimelineCameraLevel0-1
-  - Go and Find Hans, he will give you task
-  face_Animation: 4
-  body_Animation: 0
-  idle_Animation: 0
-  ConversationChoice1: []
+  - I am 80s master.
+  - Who are you?
+  - Don't get close to here.
+  - It's very dangerous.
+  face_Animation: 1
+  body_Animation: 2
+  idle_Animation: 2
+  ConversationChoice1:
+  - I am 80s master.
+  - I heard you from Hans!
+  - You are the king of platformer.
+  - Come here, go through the history.
+  - Save the future of platform game!
+  - Save the future of platform game!
   ConversationChoice2: []
-  condition_to_tigger_ConversationChoice1: 0
+  condition_to_tigger_ConversationChoice1: 1
   condition_to_tigger_ConversationChoice2: 0
