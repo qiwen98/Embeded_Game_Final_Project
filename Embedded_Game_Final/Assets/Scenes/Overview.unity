@@ -733,6 +733,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1893,6 +1898,7 @@ GameObject:
   - component: {fileID: 45550050}
   - component: {fileID: 45550049}
   - component: {fileID: 45550048}
+  - component: {fileID: 45550052}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1977,13 +1983,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45550047}
-  m_LocalRotation: {x: 0.047137436, y: 0.0009997309, z: 0.021180537, w: 0.99866337}
-  m_LocalPosition: {x: -0.0003, y: 0.0748, z: -0.0065}
-  m_LocalScale: {x: 0.0494124, y: 0.049412407, z: 0.049412392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7747243055707890768}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -0.000004109919, y: 0.3013202, z: -0.000002084999}
+  m_Father: {fileID: 1745342712}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &45550052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45550047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc62d5be0b8ec244dabc9658ccbbe08c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDistance: 1
+  maxDistance: 4
+  smooth: 10
+  dollyDirAdjusted: {x: 0, y: 0, z: 0}
+  distance: 0
+  dis_ray: 0
+  playerPosition: {fileID: 1527263365}
 --- !u!1001 &46459763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3822,6 +3847,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5017,7 +5047,7 @@ PrefabInstance:
     - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -7758,6 +7788,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9497,6 +9532,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11064,6 +11104,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GingerManModel 1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -13024,6 +13069,124 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 318739306}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &324139191
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1513822258}
+    m_Modifications:
+    - target: {fileID: 1605939441684070, guid: ce5089f3caa5bb042a4d4c23a427bc82, type: 3}
+      propertyPath: m_Name
+      value: Fixed Joystick
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ce5089f3caa5bb042a4d4c23a427bc82, type: 3}
 --- !u!4 &324339705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 405816, guid: c66e9c73031be484a9ef1afd60c584ab,
@@ -16128,6 +16291,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GingerManModel 1 (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -26147,6 +26315,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29524,6 +29697,96 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 710796228}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &712095301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 712095302}
+  - component: {fileID: 712095304}
+  - component: {fileID: 712095303}
+  - component: {fileID: 712095305}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &712095302
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712095301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1513822258}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 200, y: 0}
+  m_SizeDelta: {x: -400, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &712095303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712095301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &712095304
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712095301}
+  m_CullTransparentMesh: 0
+--- !u!114 &712095305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712095301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa8d523f51025c4da28ed860ed1a7a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TouchDist: {x: 0, y: 0}
+  PointerOld: {x: 0, y: 0}
+  Pressed: 0
 --- !u!1001 &713564297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30300,6 +30563,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31054,6 +31322,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GingerManModel 1 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -34199,6 +34472,24 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!224 &802930283 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 224070147403872398, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+    type: 3}
+  m_PrefabInstance: {fileID: 324139191}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &802930284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114859346367353968, guid: ce5089f3caa5bb042a4d4c23a427bc82,
+    type: 3}
+  m_PrefabInstance: {fileID: 324139191}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cecce8d3f549de045bea5fd79de9e7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &804352038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34976,6 +35267,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35648,7 +35944,7 @@ PrefabInstance:
     - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -40186,6 +40482,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GingerManModel 1 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -51408,6 +51709,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -55867,6 +56173,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56792,6 +57103,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GingerManModel 1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -64595,6 +64911,94 @@ Transform:
   m_Father: {fileID: 1546779965}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: -97.663994, y: 0, z: 0}
+--- !u!1 &1508566342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1508566343}
+  - component: {fileID: 1508566345}
+  - component: {fileID: 1508566344}
+  - component: {fileID: 1508566346}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1508566343
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508566342}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1513822258}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 794, y: -343}
+  m_SizeDelta: {x: 150, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1508566344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508566342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300004, guid: 2b73a1b234a311f41bdb39480366acb4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1508566345
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508566342}
+  m_CullTransparentMesh: 0
+--- !u!114 &1508566346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508566342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a14aaebc52951438941dd0f884c24b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pressed: 0
 --- !u!1001 &1508645097
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65057,6 +65461,9 @@ RectTransform:
   m_Children:
   - {fileID: 268916083}
   - {fileID: 142176899}
+  - {fileID: 802930283}
+  - {fileID: 712095302}
+  - {fileID: 1508566343}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65429,9 +65836,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1527263365}
-  - component: {fileID: 1527263364}
   - component: {fileID: 1527263366}
   - component: {fileID: 1527263367}
+  - component: {fileID: 1527263370}
+  - component: {fileID: 1527263369}
+  - component: {fileID: 1527263368}
+  - component: {fileID: 1527263364}
+  - component: {fileID: 1527263371}
   m_Layer: 0
   m_Name: GinegerMan
   m_TagString: Player
@@ -65439,24 +65850,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!143 &1527263364
-CharacterController:
+--- !u!114 &1527263364
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527263363}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 1.5
-  m_Radius: 0.2
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.6, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9767790bdf2b5414fb5b75e836735425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Jump: 0
+  Hinput: 0
+  Vinput: 0
 --- !u!4 &1527263365
 Transform:
   m_ObjectHideFlags: 0
@@ -65479,7 +65887,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527263363}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 866e58cc34c3202489c95d36c6bdd4e4, type: 3}
   m_Name: 
@@ -65513,6 +65921,76 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1527263368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527263363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351d22d05fe7394484595329bb7042a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MovingTurnSpeed: 360
+  m_StationaryTurnSpeed: 180
+  m_JumpPower: 12
+  m_GravityMultiplier: 2
+  m_RunCycleLegOffset: 0.2
+  m_MoveSpeedMultiplier: 1
+  m_AnimSpeedMultiplier: 1
+  m_GroundCheckDistance: 0.1
+--- !u!136 &1527263369
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527263363}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25279456
+  m_Height: 1.5480042
+  m_Direction: 1
+  m_Center: {x: 0.027451217, y: 0.6887264, z: -8.046505e-11}
+--- !u!54 &1527263370
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527263363}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1527263371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527263363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545a5b8cd1cf9da4186b197e27b2cf75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LeftJoystick: {fileID: 802930284}
+  Button: {fileID: 1508566346}
+  TouchField: {fileID: 712095305}
+  controlY: 0
+  controlZ: 0
+  maxControlZ: 4
+  minControlZ: 1
+  smooth: 10
 --- !u!1001 &1529791979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65979,6 +66457,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GingerManModel 1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -67045,7 +67528,7 @@ PrefabInstance:
     - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -69943,7 +70426,7 @@ PrefabInstance:
     - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -74997,6 +75480,56 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1745342711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745342712}
+  - component: {fileID: 1745342713}
+  m_Layer: 0
+  m_Name: CameraBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1745342712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745342711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.092, y: 10.575, z: -72.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 45550051}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1745342713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745342711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c7aaee89238a248825a94823d67dc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1527263365}
+  LeftJoystick: {fileID: 802930284}
+  Button: {fileID: 1508566346}
+  TouchField: {fileID: 712095305}
+  controlY: 0
+  controlZ: 0
 --- !u!1001 &1746683669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85506,6 +86039,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -86604,6 +87142,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GingerManModel 1 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
@@ -92350,6 +92893,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GingerManModel 1 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 6762407022610064567, guid: b074491daef46544a97941a145f7c29c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7747243056290682532, guid: b074491daef46544a97941a145f7c29c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -96536,8 +97084,8 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6762407023184336451}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 8c9bfc0e4e3514644ba9c8e721490e34, type: 3}
+  m_Enabled: 0
+  m_Avatar: {fileID: 9000000, guid: b235179bd2a63d1468dd430670338c55, type: 3}
   m_Controller: {fileID: 9100000, guid: 34d2f4c30ae08ba47b820247145f552b, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -97758,7 +98306,6 @@ Transform:
   - {fileID: 7816400046284801750}
   - {fileID: 2498919301349620502}
   - {fileID: 1774993315007689895}
-  - {fileID: 45550051}
   m_Father: {fileID: 1527263365}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

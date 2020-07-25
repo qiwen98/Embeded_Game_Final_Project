@@ -71,7 +71,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         PreventStandingInLowHeadroom();
 
         // send input and other state parameters to the animator
-        UpdateAnimator(move);
+        //UpdateAnimator(move);
     }
 
 

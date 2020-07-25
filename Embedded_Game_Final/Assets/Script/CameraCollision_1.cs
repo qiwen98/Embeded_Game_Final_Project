@@ -14,30 +14,39 @@ public class CameraCollision_1 : MonoBehaviour
 
     public float dis_ray;
 
+    public Transform playerPosition;
     // Use this for initialization
     void Awake()
     {
-        dollyDir = transform.localPosition.normalized;
-        distance = transform.localPosition.magnitude;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        /*
         Vector3 desiredCameraPos = transform.parent.TransformPoint(dollyDir * maxDistance);
+        Debug.Log(desiredCameraPos);
+        */
         RaycastHit hit;
 
-        if (Physics.Linecast(transform.parent.position, desiredCameraPos, out hit))
+        Vector3 desirePos = transform.parent.TransformPoint(new Vector3(0f, 0f, 2.3f));
+        Debug.Log(desirePos);
+        if (Physics.Linecast(transform.parent.position, desirePos, out hit))
         {
-            distance = Mathf.Clamp((hit.distance * dis_ray), minDistance, maxDistance);
+            Debug.Log("??");
+            transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0f, 0f, 2.3f), Time.deltaTime * smooth);
 
         }
         else
         {
-            distance = maxDistance;
+            Debug.Log("!!");
+            transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0f, 0f, 0f), Time.deltaTime * smooth);
         }
-
-        transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime * smooth);
+        /*
+        Debug.Log(dollyDir * distance);
+        Debug.Log(transform.localPosition);
+        transform.localPosition = Vector3.Lerp(transform.localPosition, dollyDir * distance, Time.deltaTime);
+        */
     }
 }

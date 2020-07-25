@@ -16,31 +16,37 @@ public class ThirdPersonInput : MonoBehaviour
 
     private Vector3 fixVector;
 
-    public float controlY = 1f;
-    public float controlZ = 2f;
+    public float controlY, controlZ;
 
-    public float dis_ray;
+    public float maxControlZ = 4f;
     public float minControlZ = 1.0f;
-    public float maxControlZ = 3.0f;
-    public float smooth = 10f;
-    
-
+    public float smooth = 10.0f;
     // Use this for initialization
     void Start()
     {
         Control = GetComponent<ThirdPersonUserControl>();
-        controlY = 2.3f;
-        controlZ = 3;
+        controlY = 2;
+        controlZ = 4;
 
-        fixVector = Vector3.down * 0.3f;
+        fixVector = Vector3.down * 0.6f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
+        Vector3 desirePos = transform.position + fixVector +
+            Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0f, controlY, minControlZ);
+
         RaycastHit hit;
-        
-        
+
+        if(Physics.Linecast(Camera.main.transform.parent.position,desirePos,out hit))
+        {
+            controlZ = minControlZ;
+        }else
+        {
+            controlZ = maxControlZ;
+        }
 
         Control.m_Jump = Button.Pressed;
         Control.Hinput = LeftJoystick.inputVector.x;
@@ -49,8 +55,10 @@ public class ThirdPersonInput : MonoBehaviour
         //CameraAngle += RightJoystick.inputVector.x * CameraAngleSpeed;
         CameraAngle += TouchField.TouchDist.x * CameraAngleSpeed;
 
-        Camera.main.transform.position = transform.position + fixVector+ Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0f, controlY, controlZ);
-        Camera.main.transform.rotation = Quaternion.LookRotation(transform.position + fixVector+ Vector3.up * 2f - Camera.main.transform.position, Vector3.up);
-        
+
+        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position,
+            transform.position + fixVector + Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0f, controlY, controlZ),Time.deltaTime * smooth);
+        Camera.main.transform.rotation = Quaternion.LookRotation(transform.position + fixVector + Vector3.up * 2f - Camera.main.transform.position, Vector3.up);
+        */
     }
 }
