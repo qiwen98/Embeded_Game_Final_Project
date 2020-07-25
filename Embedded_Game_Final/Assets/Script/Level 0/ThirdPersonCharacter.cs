@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(CapsuleCollider))]
-[RequireComponent(typeof(Animator))]
+//[RequireComponent(typeof(Animator))]
 public class ThirdPersonCharacter : MonoBehaviour
 {
     [SerializeField] float m_MovingTurnSpeed = 360;
@@ -71,7 +71,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         PreventStandingInLowHeadroom();
 
         // send input and other state parameters to the animator
-        //UpdateAnimator(move);
+        UpdateAnimator(move);
     }
 
 
@@ -121,6 +121,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
         m_Animator.SetBool("Crouch", m_Crouching);
         m_Animator.SetBool("OnGround", m_IsGrounded);
+        /*
         if (!m_IsGrounded)
         {
             m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
@@ -149,6 +150,7 @@ public class ThirdPersonCharacter : MonoBehaviour
             // don't use that while airborne
             m_Animator.speed = 1;
         }
+        */
     }
 
 

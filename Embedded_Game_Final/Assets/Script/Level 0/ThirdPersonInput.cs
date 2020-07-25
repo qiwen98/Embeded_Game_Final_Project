@@ -34,31 +34,14 @@ public class ThirdPersonInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        Vector3 desirePos = transform.position + fixVector +
-            Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0f, controlY, minControlZ);
-
-        RaycastHit hit;
-
-        if(Physics.Linecast(Camera.main.transform.parent.position,desirePos,out hit))
-        {
-            controlZ = minControlZ;
-        }else
-        {
-            controlZ = maxControlZ;
-        }
+        
+        
 
         Control.m_Jump = Button.Pressed;
         Control.Hinput = LeftJoystick.inputVector.x;
         Control.Vinput = LeftJoystick.inputVector.y;
 
-        //CameraAngle += RightJoystick.inputVector.x * CameraAngleSpeed;
-        CameraAngle += TouchField.TouchDist.x * CameraAngleSpeed;
 
-
-        Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position,
-            transform.position + fixVector + Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0f, controlY, controlZ),Time.deltaTime * smooth);
-        Camera.main.transform.rotation = Quaternion.LookRotation(transform.position + fixVector + Vector3.up * 2f - Camera.main.transform.position, Vector3.up);
-        */
+        
     }
 }

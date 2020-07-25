@@ -34,13 +34,11 @@ public class CameraCollision_1 : MonoBehaviour
         Debug.Log(desirePos);
         if (Physics.Linecast(transform.parent.position, desirePos, out hit))
         {
-            Debug.Log("??");
             transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0f, 0f, 2.3f), Time.deltaTime * smooth);
 
         }
         else
         {
-            Debug.Log("!!");
             transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0f, 0f, 0f), Time.deltaTime * smooth);
         }
         /*
