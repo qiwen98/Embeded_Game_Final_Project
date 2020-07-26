@@ -14,6 +14,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] public float m_MoveSpeedMultiplier = 1f;
     [SerializeField] float m_AnimSpeedMultiplier = 1f;
     [SerializeField] float m_GroundCheckDistance = 0.8f;
+    public CameraBaseFollow cam;
 
     Rigidbody m_Rigidbody;
     Animator m_Animator;

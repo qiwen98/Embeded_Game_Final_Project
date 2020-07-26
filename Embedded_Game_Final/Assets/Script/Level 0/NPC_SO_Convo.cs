@@ -17,6 +17,8 @@ public class NPC_SO_Convo : MonoBehaviour
     float ori_speed;
     float temp_speed=1f;
 
+    float ori_camDis;
+    float temp_camDis = 2f;
    // public NPC_SO_Convo npcStateSetter;
    // public SO_Convo myConvoSuccess;
 
@@ -41,6 +43,8 @@ public class NPC_SO_Convo : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            ori_camDis = other.gameObject.GetComponent<ThirdPersonCharacter>().cam.controlZ;
+
             //play defined anim in scriptable obj
             anim.Play(face_anim);
             anim.Play(body_anim);
@@ -63,6 +67,8 @@ public class NPC_SO_Convo : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        other.gameObject.GetComponent<ThirdPersonCharacter>().cam.controlZ = temp_camDis;
+
         transform.LookAt(other.transform);
 
         //reduce the speed of player
@@ -74,6 +80,8 @@ public class NPC_SO_Convo : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        other.gameObject.GetComponent<ThirdPersonCharacter>().cam.controlZ = ori_camDis;
+
         dialogManager.StopDialog();
 
         //restore the speed of player
