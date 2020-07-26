@@ -13,7 +13,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] float m_RunCycleLegOffset = 0.2f; //specific to the character in sample assets, will need to be modified to work with others
     [SerializeField] float m_MoveSpeedMultiplier = 1f;
     [SerializeField] float m_AnimSpeedMultiplier = 1f;
-    [SerializeField] float m_GroundCheckDistance = 0.1f;
+    [SerializeField] float m_GroundCheckDistance = 0.8f;
 
     Rigidbody m_Rigidbody;
     Animator m_Animator;
@@ -53,6 +53,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         CheckGroundStatus();
         move = Vector3.ProjectOnPlane(move, m_GroundNormal);
         m_TurnAmount = Mathf.Atan2(move.x, move.z);
+        Debug.Log(m_ForwardAmount);
         m_ForwardAmount = move.z;
 
         ApplyExtraTurnRotation();
@@ -121,7 +122,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         m_Animator.SetFloat("Turn", m_TurnAmount, 0.1f, Time.deltaTime);
         m_Animator.SetBool("Crouch", m_Crouching);
         m_Animator.SetBool("OnGround", m_IsGrounded);
-        /*
+        
         if (!m_IsGrounded)
         {
             m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
@@ -150,7 +151,7 @@ public class ThirdPersonCharacter : MonoBehaviour
             // don't use that while airborne
             m_Animator.speed = 1;
         }
-        */
+        
     }
 
 
@@ -166,6 +167,7 @@ public class ThirdPersonCharacter : MonoBehaviour
 
     void HandleGroundedMovement(bool crouch, bool jump)
     {
+
         // check whether conditions are right to allow a jump:
         if (jump && !crouch && m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Grounded"))
         {
@@ -209,6 +211,7 @@ public class ThirdPersonCharacter : MonoBehaviour
 #endif
         // 0.1f is a small offset to start the ray from inside the character
         // it is also good to note that the transform position in the sample assets is at the base of the character
+        Debug.Log("??");
         if (Physics.Raycast(transform.position + (Vector3.up * 0.1f), Vector3.down, out hitInfo, m_GroundCheckDistance))
         {
             m_GroundNormal = hitInfo.normal;
