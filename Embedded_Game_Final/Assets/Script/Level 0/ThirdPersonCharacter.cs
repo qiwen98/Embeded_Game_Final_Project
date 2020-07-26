@@ -92,6 +92,7 @@ public class ThirdPersonCharacter : MonoBehaviour
         {
             m_Animator.SetBool("walk", false);
         }
+
     }
 
     void ScaleCapsuleForCrouching(bool crouch)

@@ -8,7 +8,7 @@ public class CameraBaseFollow : MonoBehaviour
     public FixedJoystick LeftJoystick;
     public FixedButton Button;
     public FixedTouchField TouchField;
-    protected ThirdPersonUserControl Control;
+    protected PlayerController Control;
 
     protected float CameraAngle;
     protected float CameraAngleSpeed = 0.2f;
@@ -21,7 +21,7 @@ public class CameraBaseFollow : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Control = player.GetComponent<ThirdPersonUserControl>();
+        Control = player.GetComponent<PlayerController>();
         controlY = 2;
         controlZ = 4;
 
@@ -32,8 +32,8 @@ public class CameraBaseFollow : MonoBehaviour
     void Update()
     {
         //Control.m_Jump = Button.Pressed;
-        Control.Hinput = LeftJoystick.inputVector.x;
-        Control.Vinput = LeftJoystick.inputVector.y;
+        Control.h = LeftJoystick.inputVector.x;
+        Control.v = LeftJoystick.inputVector.y;
 
         //CameraAngle += RightJoystick.inputVector.x * CameraAngleSpeed;
         CameraAngle += TouchField.TouchDist.x * CameraAngleSpeed;

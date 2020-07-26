@@ -13,19 +13,20 @@ public class NPC_SO_Convo : MonoBehaviour
     string face_anim;
     string body_anim;
     string idle_anim;
-    
-    float ori_speed;
-    float temp_speed=1f;
 
-    float ori_camDis;
-    float temp_camDis = 2f;
-   // public NPC_SO_Convo npcStateSetter;
-   // public SO_Convo myConvoSuccess;
+    float ori_speed;
+    float temp_speed = 5;
+
+    // public NPC_SO_Convo npcStateSetter;
+    // public SO_Convo myConvoSuccess;
+
+    public float ori_camDis;
+    public float temp_camDis = 2f;
 
     private void Awake()
     {
 
-        Key = myConvoOri.npcName+"hasmeetPlayer";
+        Key = myConvoOri.npcName + "hasmeetPlayer";
         face_anim = myConvoOri.face_Animation.ToString();
         body_anim = myConvoOri.body_Animation.ToString();
         idle_anim = myConvoOri.idle_Animation.ToString();
@@ -41,10 +42,9 @@ public class NPC_SO_Convo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            ori_camDis = other.gameObject.GetComponent<ThirdPersonCharacter>().cam.controlZ;
-
+            ori_camDis = other.GetComponent<PlayerController>().cam.controlZ;
             //play defined anim in scriptable obj
             anim.Play(face_anim);
             anim.Play(body_anim);
@@ -53,7 +53,7 @@ public class NPC_SO_Convo : MonoBehaviour
 
 
             PlayerPrefs.SetString("MeetBefore", Key);
-            ori_speed= other.gameObject.GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier;
+            ori_speed = other.gameObject.GetComponent<PlayerController>().Speed;
 
             //if this npc meet with the player b4
             if (PlayerPrefs.HasKey("MeetBefore"))
@@ -62,35 +62,36 @@ public class NPC_SO_Convo : MonoBehaviour
             }
         }
 
-       
+
     }
 
     private void OnTriggerStay(Collider other)
     {
-        other.gameObject.GetComponent<ThirdPersonCharacter>().cam.controlZ = temp_camDis;
+        other.GetComponent<PlayerController>().cam.controlZ = temp_camDis;
 
         transform.LookAt(other.transform);
 
         //reduce the speed of player
-        other.gameObject.GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = temp_speed;
+        other.gameObject.GetComponent<PlayerController>().Speed = temp_speed;
 
-        handleNextButton();
+        handleNextButton(other);
 
     }
 
     private void OnTriggerExit(Collider other)
     {
-        other.gameObject.GetComponent<ThirdPersonCharacter>().cam.controlZ = ori_camDis;
+        other.GetComponent<PlayerController>().cam.controlZ = ori_camDis;
 
         dialogManager.StopDialog();
 
         //restore the speed of player
-        other.gameObject.GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = ori_speed;
+        other.gameObject.GetComponent<PlayerController>().Speed = ori_speed;
     }
 
-    private void handleNextButton()
+    private void handleNextButton(Collider other)
     {
-        if(Utility.instance.handleKeyBoardEvent()&&Input.GetKey(KeyCode.C))
+        PlayerController plc = other.GetComponent<PlayerController>();
+        if (Input.GetKeyDown(KeyCode.C) && Utility.instance.handleKeyBoardEvent())
         {
             dialogManager.Next();
             Utility.instance.currTime = Time.frameCount;
