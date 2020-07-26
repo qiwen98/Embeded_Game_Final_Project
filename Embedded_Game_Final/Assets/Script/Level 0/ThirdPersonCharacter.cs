@@ -11,7 +11,7 @@ public class ThirdPersonCharacter : MonoBehaviour
     [SerializeField] float m_JumpPower = 12f;
     [Range(1f, 4f)] [SerializeField] float m_GravityMultiplier = 2f;
     [SerializeField] float m_RunCycleLegOffset = 0.2f; //specific to the character in sample assets, will need to be modified to work with others
-    [SerializeField] float m_MoveSpeedMultiplier = 1f;
+    [SerializeField] public float m_MoveSpeedMultiplier = 1f;
     [SerializeField] float m_AnimSpeedMultiplier = 1f;
     [SerializeField] float m_GroundCheckDistance = 0.8f;
 
@@ -50,14 +50,15 @@ public class ThirdPersonCharacter : MonoBehaviour
         // direction.
         if (move.magnitude > 1f) move.Normalize();
         move = transform.InverseTransformDirection(move);
-        CheckGroundStatus();
+        //CheckGroundStatus();
         move = Vector3.ProjectOnPlane(move, m_GroundNormal);
         m_TurnAmount = Mathf.Atan2(move.x, move.z);
-        Debug.Log(m_ForwardAmount);
         m_ForwardAmount = move.z;
 
         ApplyExtraTurnRotation();
 
+
+        /*
         // control and velocity handling is different when grounded and airborne:
         if (m_IsGrounded)
         {
@@ -70,11 +71,27 @@ public class ThirdPersonCharacter : MonoBehaviour
 
         ScaleCapsuleForCrouching(crouch);
         PreventStandingInLowHeadroom();
-
+        
         // send input and other state parameters to the animator
         UpdateAnimator(move);
+        */
+
+        handleWalk();
     }
 
+    void handleWalk()
+    {
+        Debug.Log(m_ForwardAmount);
+        if (m_ForwardAmount >= 0.1f)
+        {
+            m_Animator.SetBool("walk", true);
+            transform.position += transform.forward * Time.deltaTime * 1f;
+        }
+        else
+        {
+            m_Animator.SetBool("walk", false);
+        }
+    }
 
     void ScaleCapsuleForCrouching(bool crouch)
     {
@@ -205,10 +222,10 @@ public class ThirdPersonCharacter : MonoBehaviour
     void CheckGroundStatus()
     {
         RaycastHit hitInfo;
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
         // helper to visualise the ground check ray in the scene view
         Debug.DrawLine(transform.position + (Vector3.up * 0.1f), transform.position + (Vector3.up * 0.1f) + (Vector3.down * m_GroundCheckDistance));
-#endif
+//#endif
         // 0.1f is a small offset to start the ray from inside the character
         // it is also good to note that the transform position in the sample assets is at the base of the character
         Debug.Log("??");

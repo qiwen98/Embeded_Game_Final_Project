@@ -15,7 +15,7 @@ public class NPC_SO_Convo : MonoBehaviour
     string idle_anim;
     
     float ori_speed;
-    float temp_speed=5;
+    float temp_speed=1f;
 
    // public NPC_SO_Convo npcStateSetter;
    // public SO_Convo myConvoSuccess;
@@ -49,7 +49,7 @@ public class NPC_SO_Convo : MonoBehaviour
 
 
             PlayerPrefs.SetString("MeetBefore", Key);
-            ori_speed= other.gameObject.GetComponent<PlayerController>().Speed ;
+            ori_speed= other.gameObject.GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier;
 
             //if this npc meet with the player b4
             if (PlayerPrefs.HasKey("MeetBefore"))
@@ -66,9 +66,9 @@ public class NPC_SO_Convo : MonoBehaviour
         transform.LookAt(other.transform);
 
         //reduce the speed of player
-        other.gameObject.GetComponent<PlayerController>().Speed = temp_speed;
+        other.gameObject.GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = temp_speed;
 
-        handleNextButton(other);
+        handleNextButton();
 
     }
 
@@ -77,13 +77,12 @@ public class NPC_SO_Convo : MonoBehaviour
         dialogManager.StopDialog();
 
         //restore the speed of player
-        other.gameObject.GetComponent<PlayerController>().Speed = ori_speed;
+        other.gameObject.GetComponent<ThirdPersonCharacter>().m_MoveSpeedMultiplier = ori_speed;
     }
 
-    private void handleNextButton(Collider other)
+    private void handleNextButton()
     {
-        PlayerController plc = other.GetComponent<PlayerController>();
-        if(plc.buttonState==ButtonState.JOYSTICK8&&Utility.instance.handleKeyBoardEvent())
+        if(Utility.instance.handleKeyBoardEvent()&&Input.GetKey(KeyCode.C))
         {
             dialogManager.Next();
             Utility.instance.currTime = Time.frameCount;

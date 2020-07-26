@@ -31,13 +31,16 @@ public class CameraBaseFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Control.m_Jump = Button.Pressed;
+        //Control.m_Jump = Button.Pressed;
         Control.Hinput = LeftJoystick.inputVector.x;
         Control.Vinput = LeftJoystick.inputVector.y;
 
         //CameraAngle += RightJoystick.inputVector.x * CameraAngleSpeed;
         CameraAngle += TouchField.TouchDist.x * CameraAngleSpeed;
+        controlY += TouchField.TouchDist.y*0.01f;
 
+        if (controlY >= 6f) controlY = 6f;
+        else if (controlY <= -1f) controlY = -1f;
 
         transform.position = player.transform.position + fixVector + Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0f, controlY, controlZ);
         transform.rotation = Quaternion.LookRotation(player.transform.position + fixVector + Vector3.up * 2f - transform.position, Vector3.up);

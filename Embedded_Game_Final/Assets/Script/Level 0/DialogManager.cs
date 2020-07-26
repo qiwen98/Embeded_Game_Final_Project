@@ -25,9 +25,6 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
          dialogPanel.SetActive(false);
-
-       
-
     }
 
     // Update is called once per frame

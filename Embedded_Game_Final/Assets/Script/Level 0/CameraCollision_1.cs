@@ -30,11 +30,10 @@ public class CameraCollision_1 : MonoBehaviour
         */
         RaycastHit hit;
 
-        Vector3 desirePos = transform.parent.TransformPoint(new Vector3(0f, 0f, 2.3f));
-        Debug.Log(desirePos);
+        Vector3 desirePos = transform.parent.TransformPoint(new Vector3(0f, 0f, distance));
         if (Physics.Linecast(transform.parent.position, desirePos, out hit))
         {
-            transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0f, 0f, 2.3f), Time.deltaTime * smooth);
+            transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0f, 0f, distance), Time.deltaTime * smooth);
 
         }
         else

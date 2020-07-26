@@ -47,6 +47,8 @@ public class PlayerController : MonoBehaviour
 
     public HUD Hud;
 
+    public float h, v;
+
 
 
     public int nrOfAlowedDJumps = 2;
@@ -75,7 +77,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        animator = transform.GetChild(0).GetComponent<Animator>();
+        animator = transform.GetComponent<Animator>();
         cc = GetComponent<CharacterController>();
         buttonState = ButtonState.EMPTY;
     }
@@ -97,24 +99,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         handleWalk();
 
         handleKeyboardEvent();
-        /*
-        if (Input.anyKeyDown)
-        {
-            foreach (KeyCode keyCode in Enum.GetValues(typeof(KeyCode)))
-            {
-                if (Input.GetKeyDown(keyCode))
-                {
-                    Debug.LogError("Current Key is : " + keyCode.ToString());
-                }
-            }
-        }
-        */
-        
     }
 
     public bool IsDead
@@ -156,8 +145,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        
 
 
 
@@ -167,7 +155,7 @@ public class PlayerController : MonoBehaviour
             transform.Rotate(0, h * RotationSpeed, 0);
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             float curSpeed = Speed * v;
-            cc.SimpleMove(forward * curSpeed);
+            cc.Move(forward * curSpeed);
             animator.SetBool("walk", true);
         }
         else
