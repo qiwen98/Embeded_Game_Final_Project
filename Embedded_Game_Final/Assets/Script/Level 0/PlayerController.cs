@@ -129,6 +129,15 @@ public class PlayerController : MonoBehaviour
 
         CheckGroundStatus();
 
+
+        if(Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.S) ||
+            Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        {
+            h = Input.GetAxis("Horizontal");
+            v = Input.GetAxis("Vertical");
+        }
+
+
         // Move forward / backward
         if (Mathf.Abs(h) >= 0.1f || Mathf.Abs(v) >= 0.1f)
         {
@@ -136,7 +145,7 @@ public class PlayerController : MonoBehaviour
             Vector3 forward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
             Vector3 move = v * forward + h * m_Cam.right;
 
-            cc.Move((v * forward + h * m_Cam.right) * 0.1f);
+            cc.Move((v * forward + h * m_Cam.right) * Speed);
             animator.SetBool("walk", true);
 
             if (move.magnitude > 1f) move.Normalize();
@@ -157,7 +166,7 @@ public class PlayerController : MonoBehaviour
 
         //jump
         //if(Input.GetButtonDown("Jump"))
-        if (buttonState == ButtonState.JOYSTICK3 || Input.GetButtonDown("Jump"))
+        if (cam.JumpButton.Pressed || Input.GetButtonDown("Jump"))
         {
             if (cc.isGrounded)
             {
