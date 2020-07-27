@@ -61,6 +61,9 @@ public class ChestHandler : MonoBehaviour
                 if(curProgress >= 0.5f && curProgress < 0.7f)
                 {
                     Camera.main.GetComponent<CameraFilterPack_Pixel_Pixelisation>()._Pixelisation = 1f;
+                }else if(curProgress==0.7f)
+                {
+
                 }
 
                 
