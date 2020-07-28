@@ -53,7 +53,7 @@ public class NPC_SO_Convo : MonoBehaviour
 
 
             PlayerPrefs.SetString("MeetBefore", Key);
-            ori_speed = other.gameObject.GetComponent<PlayerController>().Speed;
+            //ori_speed = other.gameObject.GetComponent<PlayerController>().Speed;
 
             //if this npc meet with the player b4
             if (PlayerPrefs.HasKey("MeetBefore"))
@@ -72,7 +72,7 @@ public class NPC_SO_Convo : MonoBehaviour
         transform.LookAt(other.transform);
 
         //reduce the speed of player
-        other.gameObject.GetComponent<PlayerController>().Speed = temp_speed;
+        //other.gameObject.GetComponent<PlayerController>().Speed = temp_speed;
 
         handleNextButton(other);
 
@@ -85,13 +85,13 @@ public class NPC_SO_Convo : MonoBehaviour
         dialogManager.StopDialog();
 
         //restore the speed of player
-        other.gameObject.GetComponent<PlayerController>().Speed = ori_speed;
+       // other.gameObject.GetComponent<PlayerController>().Speed = ori_speed;
     }
 
     private void handleNextButton(Collider other)
     {
         PlayerController plc = other.GetComponent<PlayerController>();
-        if (Input.GetKeyDown(KeyCode.C) && Utility.instance.handleKeyBoardEvent())
+        if (plc.cam.NextButton.Pressed && Utility.instance.handleKeyBoardEvent())
         {
             dialogManager.Next();
             Utility.instance.currTime = Time.frameCount;
