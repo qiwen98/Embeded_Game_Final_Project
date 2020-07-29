@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ChestHandler : MonoBehaviour
@@ -61,9 +62,10 @@ public class ChestHandler : MonoBehaviour
                 if(curProgress >= 0.5f && curProgress < 0.7f)
                 {
                     Camera.main.GetComponent<CameraFilterPack_Pixel_Pixelisation>()._Pixelisation = 1f;
-                }else if(curProgress==0.7f)
+                }
+                if (curProgress==0.7f)
                 {
-
+                    StartCoroutine("loadNextLevel");
                 }
 
                 
@@ -75,5 +77,10 @@ public class ChestHandler : MonoBehaviour
                 */
             }
         }
+    }
+    IEnumerator loadNextLevel()
+    {
+        yield return new WaitForSeconds(10f);
+        SceneManager.LoadScene("Level2-DonkeyKing");
     }
 }

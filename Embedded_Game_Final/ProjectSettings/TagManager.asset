@@ -3,7 +3,28 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - HomingTarget
+  - Pit
+  - SpeedPad
+  - Ring
+  - Spring
+  - Monitor
+  - CameraTrigger
+  - Enemy
+  - MovingPlatform
+  - GoalRing
+  - Checkpoint
+  - Hazard
+  - Rail
+  - MovingRing
+  - raceZone
+  - Cube
+  - Star
+  - Hammer
+  - Barrel
+  - Score
+  - Ladder
   layers:
   - Default
   - TransparentFX
@@ -13,13 +34,13 @@ TagManager:
   - UI
   - 
   - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Enemies
   - Player
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   - 
   - 
   - 

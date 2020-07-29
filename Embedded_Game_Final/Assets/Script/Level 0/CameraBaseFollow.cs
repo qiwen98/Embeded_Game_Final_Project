@@ -23,31 +23,31 @@ public class CameraBaseFollow : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Control = player.GetComponent<PlayerController>();
+        if(player.GetComponent<PlayerController>()!=null)
+            Control = player.GetComponent<PlayerController>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) ||
-            Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) ||
+            Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))&& player.GetComponent<PlayerController>() != null)
         {
             Control.h = Input.GetAxis("Horizontal");
             Control.v = Input.GetAxis("Vertical");
         }
-        else
+        else if(player.GetComponent<PlayerController>() != null)
         {
             //Control.m_Jump = Button.Pressed;
             Control.h = LeftJoystick.inputVector.x;
             Control.v = LeftJoystick.inputVector.y;
         }
 
-        //CameraAngle += RightJoystick.inputVector.x * CameraAngleSpeed;
-        CameraAngle += TouchField.TouchDist.x * CameraAngleSpeed;
 
         if(canControlY) controlY -= TouchField.TouchDist.y*0.01f;
         if (lockCameraDirection) handleCameraAngle();
+        else CameraAngle += TouchField.TouchDist.x * CameraAngleSpeed;
 
         if (controlY >= 6f) controlY = 6f;
         else if (controlY <= -1f) controlY = -1f;
@@ -58,12 +58,24 @@ public class CameraBaseFollow : MonoBehaviour
 
     void handleCameraAngle()
     {
+        if (TouchField.TouchDist.x >= 15)
+        {
+            CameraAngle += 90;
+            CameraAngle = (float)(((int)CameraAngle / 90) * 90);
+        }
+        else if(TouchField.TouchDist.x <= -15)
+        {
+            CameraAngle -= 90;
+            CameraAngle = (float)(((int)CameraAngle / 90) * 90);
+        }
+        /*
         CameraAngle = (float)((int)CameraAngle % 360);
         if (CameraAngle <= 0f) CameraAngle += 360f;
         if (Mathf.Abs(CameraAngle - 0f) <= 45) CameraAngle = 0f;
         else if(Mathf.Abs(CameraAngle - 90f) <= 45) CameraAngle = 90f;
         else if(Mathf.Abs(CameraAngle - 180f) <= 45) CameraAngle = 180f;
         else if(Mathf.Abs(CameraAngle - 270f) <= 45) CameraAngle = 270f;
+        */
     }
 
 }
