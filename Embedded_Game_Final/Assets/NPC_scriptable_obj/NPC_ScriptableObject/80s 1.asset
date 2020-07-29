@@ -29,3 +29,12 @@ MonoBehaviour:
   ConversationChoice2: []
   condition_to_tigger_ConversationChoice1: 0
   condition_to_tigger_ConversationChoice2: 0
+  ac:
+  - {fileID: 8300000, guid: 2ce7cc108fcd5c2488050329e4063f9d, type: 3}
+  - {fileID: 8300000, guid: 1e3e04e489d817a4c9aaa99f12457287, type: 3}
+  - {fileID: 8300000, guid: e81d97c4a5e814d4480b57a7af229f03, type: 3}
+  - {fileID: 8300000, guid: d55ea2cd6c165bf41866a82f75e8fbdd, type: 3}
+  - {fileID: 8300000, guid: 184fc6f28c28bf34997919bcb0a33f83, type: 3}
+  - {fileID: 8300000, guid: e81d97c4a5e814d4480b57a7af229f03, type: 3}
+  - {fileID: 8300000, guid: 2ce7cc108fcd5c2488050329e4063f9d, type: 3}
+  - {fileID: 8300000, guid: d55ea2cd6c165bf41866a82f75e8fbdd, type: 3}

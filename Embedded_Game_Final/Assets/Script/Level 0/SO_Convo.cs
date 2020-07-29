@@ -18,6 +18,8 @@ public class SO_Convo : ScriptableObject
     public bool condition_to_tigger_ConversationChoice1=false;
     public bool condition_to_tigger_ConversationChoice2=false;
 
+    public List<AudioClip> ac = new List<AudioClip>();
+
     public void reset()
     {
         condition_to_tigger_ConversationChoice1 = false;

@@ -18,6 +18,8 @@ public class DialogManager : MonoBehaviour
     CanvasGroup canvasgroup;
 
     private List<string> conversation;
+    private List<AudioClip> acl;
+
     int convoIndex;
  
 
@@ -44,10 +46,10 @@ public class DialogManager : MonoBehaviour
         {
             conversation = new List<string>(_convo.defaultConversation);
         }
-       
+        acl = new List<AudioClip>(_convo.ac);
         convoIndex = 0;
         showText();
-
+        
         dialogPanel.SetActive(true);
         //make the fialod fade in
         canvasgroup = dialogPanel.GetComponent<CanvasGroup>();
@@ -114,8 +116,13 @@ public class DialogManager : MonoBehaviour
             showText();
            
         }
+        if (acl.Capacity > convoIndex)
+        {
+            GetComponent<AudioSource>().clip = acl[convoIndex];
+            GetComponent<AudioSource>().Play();
+        }
 
 
-       
+
     }
 }

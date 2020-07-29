@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Next_Level/Sonic/[Stage01_AltitudeLimit].unity
+    path: Assets/Next_Level/Level3-Sonic/[Stage01_AltitudeLimit].unity
     guid: 589691f2ba49f5a469f26b207e9ec97d
   m_configObjects: {}
