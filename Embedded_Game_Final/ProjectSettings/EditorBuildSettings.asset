@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Next_Level/Level2/Scenes/Level2.unity
-    guid: fc0a43e33bd9c4cc5b9cb3271bd9c05d
-  - enabled: 1
-    path: Assets/Next_Level/Level2_Extra/Level2-DonkeyKing.unity
-    guid: 23700d83f808cac4fb7f368f68936ce2
+    path: Assets/Next_Level/Level3-Sonic/[Stage01_AltitudeLimit].unity
+    guid: 589691f2ba49f5a469f26b207e9ec97d
   m_configObjects: {}
