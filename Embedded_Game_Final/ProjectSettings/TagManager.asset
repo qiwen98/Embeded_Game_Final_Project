@@ -25,6 +25,12 @@ TagManager:
   - Barrel
   - Score
   - Ladder
+  - Water
+  - Pickup
+  - Coin
+  - Pushable
+  - CheckPoint
+  - Death
   layers:
   - Default
   - TransparentFX
