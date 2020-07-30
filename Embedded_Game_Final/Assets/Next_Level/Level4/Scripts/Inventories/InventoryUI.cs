@@ -9,6 +9,8 @@ public class InventoryUI : MonoBehaviour
     Inventory inventory;
 
     InventorySlot[] slots;
+
+    public FixedButton inventoryButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,10 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.B))
+        if(inventoryButton.Pressed&&Utility.instance.handleKeyBoardEvent())
         {
+            Debug.Log("in");
+            Utility.instance.currTime = Time.frameCount;
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }
     }

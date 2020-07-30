@@ -44,9 +44,13 @@ public class PlayerMove : MonoBehaviour
 	private CharacterMotor characterMotor;
 	private EnemyAI enemyAI;
 	private DealDamage dealDamage;
-	
-	//setup
-	void Awake()
+
+    public FixedJoystick joystick;
+    public FixedButton jumpButton;
+    public FixedButton catchButton;
+
+    //setup
+    void Awake()
 	{
 		//create single floorcheck in centre of object, if none are assigned
 		if(!floorChecks)
@@ -92,12 +96,16 @@ public class PlayerMove : MonoBehaviour
 		screenMovementSpace = Quaternion.Euler (0, mainCam.eulerAngles.y, 0);
 		screenMovementForward = screenMovementSpace * Vector3.forward;
 		screenMovementRight = screenMovementSpace * Vector3.right;
-		
-		//get movement input, set direction to move in
-		float h = Input.GetAxisRaw ("Horizontal");
-		float v = Input.GetAxisRaw ("Vertical");
-		//only apply vertical input to movemement, if player is not sidescroller
-		if(!sidescroller)
+
+        //get movement input, set direction to move in
+        //float h = Input.GetAxisRaw("Horizontal");
+        //float v = Input.GetAxisRaw("Vertical");
+
+        float h = joystick.inputVector.x;
+        float v = joystick.inputVector.y;
+
+        //only apply vertical input to movemement, if player is not sidescroller
+        if (!sidescroller)
 			direction = (screenMovementForward * v) + (screenMovementRight * h);
 		else
 			direction = Vector3.right * h;
@@ -206,14 +214,14 @@ public class PlayerMove : MonoBehaviour
 			GetComponent<AudioSource>().Play ();
 		}
 		//if we press jump in the air, save the time
-		if (Input.GetButtonDown ("Jump") && !grounded)
+		if ((Input.GetButtonDown("Jump") || jumpButton.PressDown)  && !grounded)
 			airPressTime = Time.time;
 		
 		//if were on ground within slope limit
 		if (grounded && slope < slopeLimit)
 		{
 			//and we press jump, or we pressed jump justt before hitting the ground
-			if (Input.GetButtonDown ("Jump") || airPressTime + jumpLeniancy > Time.time)
+			if ((Input.GetButtonDown("Jump") || jumpButton.PressDown) || airPressTime + jumpLeniancy > Time.time)
 			{	
 				//increment our jump type if we haven't been on the ground for long
 				onJump = (groundedCount < jumpDelay) ? Mathf.Min(2, onJump + 1) : 0;
