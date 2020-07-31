@@ -23,9 +23,10 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inventoryButton!=null&inventoryButton.Pressed&&Utility.instance.handleKeyBoardEvent())
-        {
-            Debug.Log("in");
+        if(inventoryButton.Pressed&&Utility.instance.handleKeyBoardEvent())
+        //  if (inventoryButton.Pressed && Utility.instance.handleKeyBoardEvent())
+          {
+            Debug.Log("yesin");
             Utility.instance.currTime = Time.frameCount;
             inventoryUI.SetActive(!inventoryUI.activeSelf);
         }

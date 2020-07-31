@@ -33,7 +33,7 @@ public class EnemyStats : ChatacterStats
         if (Health_Silder!=null)
         {
             EnemyStats enemyStats = GetComponent<EnemyStats>();
-            Health_Silder.value =(enemyStats.currentHealth / enemyStats.maxHealth);
+            Health_Silder.value=(float)enemyStats.currentHealth /(float) enemyStats.maxHealth;
         }
        
       
