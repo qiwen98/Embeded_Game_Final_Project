@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5966634919701450686}
   - component: {fileID: 1618871440861914791}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: UIcloseCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,6 +31,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 3938240338699850901}
+  - {fileID: 164882524519984654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -116,7 +117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3938240338699850901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -127,8 +128,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 164882524519984654}
+  m_Children: []
   m_Father: {fileID: 1565771350257868521}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -179,8 +179,13 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 3938240338699850901}
+    m_TransformParent: {fileID: 1565771350257868521}
     m_Modifications:
+    - target: {fileID: 1030836338953636010, guid: 84115e38c093d6d47ab6fe9b82db51a9,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseUnPaused
+      objectReference: {fileID: 0}
     - target: {fileID: 1030836338953636016, guid: 84115e38c093d6d47ab6fe9b82db51a9,
         type: 3}
       propertyPath: m_Name
@@ -204,17 +209,17 @@ PrefabInstance:
     - target: {fileID: 1030836338953636017, guid: 84115e38c093d6d47ab6fe9b82db51a9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1030836338953636017, guid: 84115e38c093d6d47ab6fe9b82db51a9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1030836338953636017, guid: 84115e38c093d6d47ab6fe9b82db51a9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1030836338953636017, guid: 84115e38c093d6d47ab6fe9b82db51a9,
         type: 3}
@@ -224,7 +229,7 @@ PrefabInstance:
     - target: {fileID: 1030836338953636017, guid: 84115e38c093d6d47ab6fe9b82db51a9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1030836338953636017, guid: 84115e38c093d6d47ab6fe9b82db51a9,
         type: 3}

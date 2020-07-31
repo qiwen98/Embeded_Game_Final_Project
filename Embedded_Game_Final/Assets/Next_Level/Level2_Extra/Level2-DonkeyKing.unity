@@ -12351,7 +12351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The world with color is so beautiful!
+  m_Text: You will not get hurt! Just try to rescue to princess!
 --- !u!224 &3145823892797851160
 RectTransform:
   m_ObjectHideFlags: 0

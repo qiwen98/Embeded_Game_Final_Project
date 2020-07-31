@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraBaseFollow : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class CameraBaseFollow : MonoBehaviour
 
     public bool canControlY;
     public bool lockCameraDirection;
+
+    float accTime = 0f;
     // Use this for initialization
     void Start()
     {
@@ -54,6 +57,20 @@ public class CameraBaseFollow : MonoBehaviour
 
         transform.position = player.transform.position + fixVector + Quaternion.AngleAxis(CameraAngle, Vector3.up) * new Vector3(0f, controlY, controlZ);
         transform.rotation = Quaternion.LookRotation(player.transform.position + fixVector + Vector3.up * 2f - transform.position, Vector3.up);
+
+
+        if (LeftJoystick.inputVector.x >= 0.7f)
+        {
+            accTime += Time.deltaTime;
+            if (accTime >= 4f)
+            {
+                SceneManager.LoadScene("Choose");
+            }
+        }
+        else
+        {
+            accTime = 0f;
+        }
     }
 
     void handleCameraAngle()

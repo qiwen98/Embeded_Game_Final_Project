@@ -5,25 +5,28 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainMenu.unity
     guid: b9c2c4a800aea8245967b17da572e64b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level0.unity
     guid: af9a4cb92e9f73243b46e64789af715a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Next_Level/Level2/Scenes/Level2.unity
     guid: fc0a43e33bd9c4cc5b9cb3271bd9c05d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Next_Level/Level2_Extra/Level2-DonkeyKing.unity
     guid: 23700d83f808cac4fb7f368f68936ce2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Next_Level/Level3-Mario/MarioScene.unity
     guid: 7760ca08210960e4dada8c69260d8946
-  - enabled: 1
-    path: Assets/Next_Level/Level3-Sonic/[Stage01_AltitudeLimit].unity
+  - enabled: 0
+    path: Assets/Next_Level/Level3-Sonic/SonicScene.unity
     guid: 589691f2ba49f5a469f26b207e9ec97d
   - enabled: 1
-    path: Assets/Next_Level/Level4/Scenes/Level_4.unity
+    path: Assets/Next_Level/Level4/Scenes/Level4.unity
     guid: 0fd2b0e5ecc9cf84394d2a517a46927b
+  - enabled: 0
+    path: Assets/Next_Level/Level5/Scenes/Level5.unity
+    guid: 09c5771e6f439b8449e7d416f03c972c
   m_configObjects: {}
